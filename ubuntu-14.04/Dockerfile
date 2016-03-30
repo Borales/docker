@@ -11,7 +11,10 @@ ENV LC_ALL     en_US.UTF-8
 RUN apt-get update && apt-get -y install \
     python-software-properties software-properties-common wget curl git nano openssh-server
 
-RUN add-apt-repository ppa:nginx/development && apt-get update && apt-get install -y nginx
+RUN add-apt-repository ppa:nginx/development && curl -sL https://deb.nodesource.com/setup_5.x | bash - && \
+    apt-get update && apt-get install -y nginx nodejs
 
 RUN cd $HOME && wget http://getcomposer.org/composer.phar && chmod +x composer.phar && \
-    mv composer.phar /usr/local/bin/composer
+    mv composer.phar /usr/local/bin/composer && npm install -g bower grunt-cli gulp pm2
+
+EXPOSE 80 443
