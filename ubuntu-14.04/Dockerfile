@@ -17,4 +17,4 @@ RUN add-apt-repository ppa:nginx/development && curl -sL https://deb.nodesource.
 RUN cd $HOME && wget http://getcomposer.org/composer.phar && chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer && npm install -g bower grunt-cli gulp pm2
 
-EXPOSE 80 443
+EXPOSE 80 443 22
