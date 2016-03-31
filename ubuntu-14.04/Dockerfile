@@ -22,4 +22,6 @@ RUN usermod -u 1000 www-data && \
     chsh -s /bin/bash www-data && \
     chown -R www-data:www-data /var/www
 
+RUN sed -i "s/# server_tokens off;/server_tokens off;/" /etc/nginx/nginx.conf
+
 EXPOSE 80 443 22
