@@ -18,7 +18,8 @@ RUN add-apt-repository ppa:nginx/development && curl -sL https://deb.nodesource.
 RUN cd $HOME && wget http://getcomposer.org/composer.phar && chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer && npm install -g bower grunt-cli gulp pm2
 
-RUN usermod -u 1000 www-data
-RUN chsh -s /bin/bash www-data
+RUN usermod -u 1000 www-data && \
+    chsh -s /bin/bash www-data && \
+    chown -R www-data:www-data /var/www
 
 EXPOSE 80 443 22
