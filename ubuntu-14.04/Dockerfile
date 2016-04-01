@@ -16,8 +16,7 @@ RUN add-apt-repository ppa:nginx/development && curl -sL https://deb.nodesource.
     apt-get update && apt-get install -y nginx nodejs
 
 RUN cd $HOME && wget http://getcomposer.org/composer.phar && chmod +x composer.phar && \
-    mv composer.phar /usr/local/bin/composer && composer global require "fxp/composer-asset-plugin:~1.1.3" && \
-    npm install -g bower grunt-cli gulp pm2
+    mv composer.phar /usr/local/bin/composer && npm install -g bower grunt-cli gulp pm2
 
 RUN usermod -u 1000 www-data && \
     chsh -s /bin/bash www-data && \
