@@ -10,7 +10,7 @@ ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
 RUN apt-get update && apt-get -y install \
-    python-software-properties software-properties-common wget curl git nano openssh-server
+    python-software-properties software-properties-common wget curl git nano openssh-server htop
 
 RUN add-apt-repository ppa:nginx/development && curl -sL https://deb.nodesource.com/setup_5.x | bash - && \
     apt-get update && apt-get install -y nginx nodejs
