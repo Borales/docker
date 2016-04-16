@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-sudo service ssh start
-sudo service rsyslog start
-sudo service nginx start
-sudo service php7.0-fpm start
+service ssh start
+service rsyslog start
+service nginx start
+service php7.0-fpm start
+cron
 
 tail -f /dev/null
