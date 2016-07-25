@@ -12,7 +12,7 @@ ENV LC_ALL     en_US.UTF-8
 RUN apt-get update && apt-get -y install \
     python-software-properties software-properties-common wget curl git nano openssh-server
 
-RUN add-apt-repository ppa:nginx/development && curl -sL https://deb.nodesource.com/setup_5.x | bash - && \
+RUN add-apt-repository ppa:nginx/development && curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     apt-get update && apt-get install -y nginx nodejs
 
 RUN cd $HOME && wget http://getcomposer.org/composer.phar && chmod +x composer.phar && \
