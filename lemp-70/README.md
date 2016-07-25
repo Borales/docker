@@ -11,7 +11,7 @@ docker pull borales/lemp-70:dev
 ```
 
 - Ubuntu 14.04
-- PHP 7.0.5
-- Nginx 1.9.12
-- Composer (w/ fxp/composer-asset-plugin:~1.1.3)
-- Node.js 5.7.0 + NPM 3.6.0 (Bower, Grunt-cli, Gulp, PM2)
+- PHP 7.0.9
+- Nginx 1.11.2
+- Composer (w/ fxp/composer-asset-plugin:~1.2.0)
+- Node.js 6.3.1 + NPM 3.10.3 (Bower, Grunt-cli, Gulp, PM2)
