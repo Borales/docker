@@ -1,4 +1,4 @@
-# Base Ubuntu-14.04 image
+# Base Ubuntu-16.04 image
 
 [![](https://images.microbadger.com/badges/image/borales/ubuntu.svg)](http://microbadger.com/images/borales/ubuntu)
 
