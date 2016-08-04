@@ -1,4 +1,4 @@
-FROM borales/ubuntu
+FROM borales/ubuntu:16.04
 
 MAINTAINER Alexandr Bordun
 
