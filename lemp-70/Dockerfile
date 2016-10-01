@@ -14,7 +14,6 @@ RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/fpm/php.ini
 RUN sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.0/fpm/php.ini
 RUN echo "www-data ALL=(ALL) NOPASSWD:/usr/sbin/service php7.0-fpm restart" >> /etc/sudoers
-# RUN composer global require "fxp/composer-asset-plugin:~1.2.0"
 
 ADD ./run-server.sh /run-server.sh
 CMD bash -x run-server.sh
