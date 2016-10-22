@@ -1,15 +1,9 @@
 # Docker LEMP (PHP 7) environment
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/borales/lemp-70.svg)]() 
-
-[![](https://images.microbadger.com/badges/image/borales/lemp-70.svg)](http://microbadger.com/images/borales/lemp-70)
-
-[![borales/lemp-70](http://dockeri.co/image/borales/lemp-70)](https://hub.docker.com/r/borales/lemp-70/)
-
 ```
-docker pull borales/lemp-70:latest
+docker pull borales/nginx-php:7.0
 # dev (w/ xdebug)
-docker pull borales/lemp-70:dev
+docker pull borales/nginx-php:7.0-dev
 ```
 
 [![Ubuntu version](https://img.shields.io/badge/Ubuntu-16.04-blue.svg)]()
