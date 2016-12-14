@@ -1,4 +1,4 @@
-FROM borales/nginx-php:7.1
+FROM borales/nginx-php:latest
 
 MAINTAINER Alexandr Bordun
 
