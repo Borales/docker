@@ -2,7 +2,7 @@ FROM borales/ubuntu
 
 MAINTAINER Alexandr Bordun
 
-RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update
+RUN LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update
 
 # Installing PHP packages
 RUN apt-get install -y mysql-client-5.7 \
