@@ -6,9 +6,10 @@ RUN LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update
 
 # Installing PHP packages
 RUN apt-get install -y mysql-client-5.7 \
+    php7.1-cli php7.1-common php7.1-readline \
     php-apcu php7.1-curl php7.1-fpm php7.1-gd php-imagick php7.1-json \
     php7.1-intl php-memcached php7.1-mcrypt php7.1-mysql php-mongodb \
-    php-pear php-redis php7.1-xsl php7.1-mbstring php7.1-zip php7.1-xml php7.1-opcache
+    php-redis php7.1-xsl php7.1-mbstring php7.1-zip php7.1-xml php7.1-opcache
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/fpm/php.ini
