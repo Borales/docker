@@ -13,7 +13,7 @@ RUN apt-get install -y mysql-client-5.7 \
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/fpm/php.ini
 RUN sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.1/fpm/php.ini
-RUN echo "www-data ALL=(ALL) NOPASSWD:/usr/sbin/service php7.1-fpm restart" >> /etc/sudoers
+RUN echo "www-data ALL=(ALL) NOPASSWD:/usr/sbin/service php7.1-fpm restart" > /etc/sudoers.d/www-data-phpfpm
 
 ADD ./run-server.sh /run-server.sh
 CMD bash -x /run-server.sh
