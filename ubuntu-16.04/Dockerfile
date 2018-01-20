@@ -21,5 +21,13 @@ RUN chsh -s /bin/bash www-data && \
     chown -R www-data:www-data /var/www
 
 RUN sed -i "s/# server_tokens off;/server_tokens off;/" /etc/nginx/nginx.conf
+RUN sed -i "s/# server_tokens off;/server_tokens off;/" /etc/nginx/nginx.conf
+RUN sed -i "s/# server_tokens off;/server_tokens off;/" /etc/nginx/nginx.conf
+RUN sed -i "s/# gzip_vary/gzip_vary/" /etc/nginx/nginx.conf
+RUN sed -i "s/# gzip_proxied/gzip_proxied/" /etc/nginx/nginx.conf
+RUN sed -i "s/# gzip_comp_level/gzip_comp_level/" /etc/nginx/nginx.conf
+RUN sed -i "s/# gzip_buffers/gzip_buffers/" /etc/nginx/nginx.conf
+RUN sed -i "s/# gzip_http_version/gzip_http_version/" /etc/nginx/nginx.conf
+RUN sed -i "s/# gzip_types/gzip_types/" /etc/nginx/nginx.conf
 
 EXPOSE 80 443 22
