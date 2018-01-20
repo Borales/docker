@@ -8,8 +8,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
-RUN apt-get update && apt-get -y install \
-    python-software-properties software-properties-common wget curl git nano openssh-server htop sudo
+RUN apt-get update && apt-get -y install python-software-properties software-properties-common \
+    wget curl git nano openssh-server htop sudo rsyslog logrotate
 
 RUN add-apt-repository ppa:nginx/development && curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get update && apt-get install -y nginx nodejs
